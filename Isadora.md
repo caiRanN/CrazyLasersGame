@@ -4,7 +4,7 @@ Isadora is a visual scripting program which enables user to script by drawing li
 
 __IMPORTANT!__ The bareconductive is connected with tinfoil underneath the ground. 
 
-In the image below you can see the how I setup a pressure plate within isadora. First the values from the barconductive are measured. Then the values are learned by comparing someone who stands on the trigger against when nobody stands on it. The next step is to check with a comparator if the value is high enough. Then is toggels the pictures which changes the projection. 
+In the image below you can see the how I setup a pressure plate within isadora. First the values from the barconductive are measured. Then the values are learned by comparing someone who stands on the trigger against when nobody stands on it. The next step is to check with a comparator if the value is high enough. Then is toggles the pictures which changes the projection. 
 
 The other part of the setup starts also with a comparator which triggers the sound and finally connects with the lights. The last part is the connections with unity. By using a OSCsender it sends the values from isadora to unity.
 
