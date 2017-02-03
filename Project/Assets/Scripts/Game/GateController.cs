@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using HKUECT;
 
+/// <summary>
+/// Example of Isadora to Unity communication
+/// Handles the opening of laser door when isadora sends a message
+/// </summary>
 public class GateController : MonoBehaviour {
 
 	public OSCReceiver receiver;
