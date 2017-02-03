@@ -16,9 +16,11 @@ Once you have these things setup, you can download or clone this repository and 
 You will first need to set up your isadora project, you can find the documentation about how to setup the isadora project [here](Isadora.md). You will need a OSC Sender in your project to send data to Unity.
 
 __Isadora to Unity__
+
 You can deactivate GameObjects in Unity when interacting with something in Isadora by listening for a OSC message. Create a empty GameObject and add the OSCReceiver script, you will need to setup you connection via the inspector. You can look at the GateController script for an example on how to enable/disable objects.
 
 __Unity to Isadora__
+
 You can add the OSCClient to your script, from here you can send data to Isadora. Look at the example provided in the [GameManager](Project/Assets/Scripts/Manager/GameManager.cs).
 
 ### Connect to the GearVR
