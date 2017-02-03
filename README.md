@@ -17,11 +17,10 @@ Crazy Lasers is a game created in 8 days during a seminar at the HKU expertise c
 * BareConductive Isadora (https://github.com/hku-ect/BareConductive)
 
 ## Credits
-Niels van Unen (Game Design)
-Cairan Steverink (Gameplay Programming)
-Nadia Groenewald (Interaction Design)
-Kay Volbeda (Game Art)
-Jelle Hoogenberg (Game Design)
+* Niels van Unen (Game Design)
+* Cairan Steverink (Gameplay Programming)
+* Nadia Groenewald (Interaction Design)
+* Kay Volbeda (Game Art)
+* Jelle Hoogenberg (Game Design)
 
-Thanks to
-HKU-ECT (https://github.com/hku-ect) for providing us with the tools and support.
+Special thanks to the HKU-ECT (https://github.com/hku-ect) for providing us with the tools and support.
