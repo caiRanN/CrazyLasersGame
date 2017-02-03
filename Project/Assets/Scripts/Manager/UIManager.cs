@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles the User Interface and displays messages when certain events are called
+/// </summary>
 public class UIManager : MonoBehaviour {
 
 	public GameObject startObject;
@@ -18,16 +21,21 @@ public class UIManager : MonoBehaviour {
 	}
 
 	private void GameStartHandler(object sender, string message) {
-		StartCoroutine(DisplayText());
+		StartCoroutine(DisplayText(3f));
 	}
 
 	private void GameEndHandler(object sender, string message) {
 		endObject.SetActive(true);
 	}
 
-	private IEnumerator DisplayText() {
+	/// <summary>
+	/// Activates a GameObject for a amount of seconds and turns it off again
+	/// </summary>
+	/// <returns>null</returns>
+	/// <param name="seconds">Amount of seconds before deactivation</param>
+	private IEnumerator DisplayText(float seconds) {
 		startObject.SetActive(true);
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(seconds);
 		startObject.SetActive(false);
 		yield return null;
 	}

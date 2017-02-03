@@ -16,12 +16,16 @@ public class GateController : MonoBehaviour {
 	private void Update() {
 		GateHandler();
 	}
-
+		
 	private bool ShouldOpenDoor(float value) {
 		return (value == 1);
 		return (value == 0);
 	}
 
+	/// <summary>
+	/// Check if the gate requires multiple buttons to be pressed simultaneously
+	/// and open door if the value returns true
+	/// </summary>
 	private void GateHandler() {
 		bool playerOpenGate = ShouldOpenDoor((float)receiver.GetValue(oscValue));
 		bool audienceOpenGate = ShouldOpenDoor((float)receiver.GetValue(audienceOscValue));

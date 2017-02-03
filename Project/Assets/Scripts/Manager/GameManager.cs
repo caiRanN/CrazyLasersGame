@@ -8,31 +8,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	public AudioClip clip;
-	public AudioSource source;
 	private OSCClient client;
 
+	// Initialize OSCClient and send GameStart event
 	private void Start() {
 		client = new OSCClient(IPAddress.Parse("10.200.200.58"), 1234);
 		EventManager<object, string>.LaunchEvent(EventList.GameStart, this, "");
 	}
 
 	private void OnEnable() {
-		EventManager<object, string>.GameStart += GameStartHandler;
 		EventManager<object, string>.GameEnd += GameEndHandler;
 	}
 
 	private void OnDisable() {
-		EventManager<object, string>.GameStart -= GameStartHandler;
 		EventManager<object, string>.GameEnd -= GameEndHandler;
 	}
 
-	private void GameStartHandler(object sender, string message) {
-		Debug.Log("Game Start");
-	}
 
 	private void GameEndHandler(object sender, string message) {
-		SendMessage();
+		SendMessage(1f);
+		StartCoroutine(Restart(10));
 	}
 
 	private void OnDestroy() {
@@ -40,19 +35,22 @@ public class GameManager : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Send OSC message
+	/// Send OSC message to client
 	/// </summary>
-	private void SendMessage() {
+	/// <param name="value">Value.</param>
+	private void SendMessage(float value) {
 		OSCMessage m = new OSCMessage("/unity_trigger1");
-		m.Append(1f);
+		m.Append(value);
 		client.Send(m);
 	}
 
 	/// <summary>
-	/// Restart the scene after 10 seconds
+	/// Restart the current scene after set amount of seconds
 	/// </summary>
-	private IEnumerator Restart() {
-		yield return new WaitForSeconds(10);
+	/// <param name="seconds">Seconds until restart</param>
+	private IEnumerator Restart(float seconds) {
+		yield return new WaitForSeconds(seconds);
 		SceneManager.LoadScene(1);
+		yield return null;
 	}
 }
