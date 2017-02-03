@@ -1,5 +1,5 @@
 # Isadora Setup
-_Documentation provided by Niels van Unen._
+_Isadora documentation provided by Niels van Unen._
 
 Isadora is a visual scripting program which enables user to script by drawing lines between instances, The experience we build exists out of of a bareconductive with sensors, projector, sound and lights, Isadora is connected with the barconductive and measures the values from the sensors and translates it to isadora. 
 
