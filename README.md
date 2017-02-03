@@ -13,12 +13,20 @@ Since this implementation relies heavily on the the tools provided by the HKU-EC
 Once you have these things setup, you can download or clone this repository and open it using Unity 5.5+
 
 ### Connect with Isadora
+You will first need to set up your isadora project, you can find the documentation about how to setup the isadora project [here](isadora.md). You will need a OSC Sender in your project to send data to Unity.
 
+[b]Isadora to Unity[/b]
+You can deactivate GameObjects in Unity when interacting with something in Isadora by listening for a OSC message. Create a empty GameObject and add the OSCReceiver script, you will need to setup you connection via the inspector. You can look at the GateController script for an example on how to enable/disable objects.
+
+[b]Unity to Isadora[/b]
+You can add the OSCClient to your script, from here you can send data to Isadora. Look at the example provided in the [GameManager](Project/Assets/Scripts/Manager/GameManager.cs).
 
 ### Connect to the GearVR
-
+You will need to go through the GearVRHandshaker scene first, here you can set your follow-up scene, this will be autoloaded once the handshake has been made. In your scene you are gonna need to add GearVRTracker to track the location of the player wearing the GearVR, and the GearVR GameObject.
 
 ### Dependencies
+Make sure you have the following software dependencies installed!
+* A computer running Motive
 * Unity OSC Toolkit (https://github.com/hku-ect/UnityOSCToolkit)
 * GearVR OSC Handshakker (https://github.com/hku-ect/GearVR-OSC-Handshaker)
 * NatNet2 OSC Bridge (https://github.com/hku-ect/NatNet2OSCbridge)
