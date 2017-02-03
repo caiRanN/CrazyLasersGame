@@ -43,4 +43,4 @@ Make sure you have the following software dependencies installed!
 * Kay Volbeda (Game Art)
 * Jelle Hoogenberg (Game Design)
 
-Special thanks to the HKU-ECT (https://github.com/hku-ect) for providing us with the tools and support.
+Thanks to the HKU-ECT (https://github.com/hku-ect) for providing us with the tools and support.
