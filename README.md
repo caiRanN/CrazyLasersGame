@@ -8,7 +8,7 @@ Since this implementation relies heavily on the the tools provided by the HKU-EC
 
 * A computer running Motive
 * A computer running the NatNet2OSCBridge (currently untested on Windows)
-* (Optional) A computer running the GearVRHandshaker
+* A computer running the GearVRHandshaker
 
 Once you have these things setup, you can download or clone this repository and open it using Unity 5.5+
 
